@@ -28,4 +28,5 @@ class ShoppingBasket:
 
     def remove_all_of_item(self, item):
         if item in self.basket:
+            self.subtotal -= self.basket[item] * self.catalogue[item]
             self.basket.pop(item)
