@@ -24,6 +24,7 @@ class ShoppingBasket:
             self.basket[item] -= 1
             if self.basket[item] == 0:
                 self.basket.pop(item)
+            self.subtotal -= self.catalogue[item]
 
     def remove_all_of_item(self, item):
         if item in self.basket:
