@@ -28,5 +28,5 @@ class TestShoppingBasket(TestCase):
     def test_remove_one_item_from_basket(self):
         self.shopping_basket.add_item_to_basket("Baked Beans")
         self.shopping_basket.add_item_to_basket("Biscuits")
-        self.shopping_basket.remove_one_item_from_basket("Baked Beans")
+        self.shopping_basket.remove_one_of_item_from_basket("Baked Beans")
         self.assertEqual({"Biscuits": 1}, self.shopping_basket.basket)
