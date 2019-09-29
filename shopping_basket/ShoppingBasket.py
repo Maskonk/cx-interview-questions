@@ -22,4 +22,5 @@ class ShoppingBasket:
                 self.basket.pop(item)
 
     def remove_all_of_item(self, item):
-        pass
+        if item in self.basket:
+            self.basket.pop(item)
