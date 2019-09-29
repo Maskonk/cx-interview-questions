@@ -17,6 +17,7 @@ class ShoppingBasket:
                 self.basket[item] += 1
             else:
                 self.basket[item] = 1
+            self.subtotal += self.catalogue[item]
 
     def remove_one_of_item_from_basket(self, item):
         if item in self.basket:
