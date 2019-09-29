@@ -5,6 +5,9 @@ class ShoppingBasket:
 
     def __init__(self):
         self.basket = {}
+        self.subtotal = 0
+        self.discount = 0
+        self.total = 0
         with open('shopping_basket/Catalogue.json', 'r') as f:
             self.catalogue = json.load(f)
 
