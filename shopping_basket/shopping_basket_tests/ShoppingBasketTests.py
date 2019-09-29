@@ -15,3 +15,9 @@ class TestShoppingBasket(TestCase):
         self.shopping_basket.add_item_to_basket("Biscuits")
         self.shopping_basket.add_item_to_basket("Biscuits")
         self.assertEqual({"Biscuits": 2}, self.shopping_basket.basket)
+
+    def test_add_item_to_basket_two_different_items(self):
+        self.shopping_basket.add_item_to_basket("Biscuits")
+        self.shopping_basket.add_item_to_basket("Baked Beans")
+        self.assertEqual({"Baked Beans": 1, "Biscuits": 1}, self.shopping_basket.basket)
+
