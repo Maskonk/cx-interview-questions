@@ -20,3 +20,6 @@ class ShoppingBasket:
             self.basket[item] -= 1
             if self.basket[item] == 0:
                 self.basket.pop(item)
+
+    def remove_all_of_item(self, item):
+        pass
