@@ -58,3 +58,11 @@ class TestShoppingBasket(TestCase):
         self.shopping_basket.add_item_to_basket("Biscuits")
         self.shopping_basket.remove_one_of_item_from_basket("Biscuits")
         self.assertEqual(0.99, self.shopping_basket.subtotal)
+
+    def test_removing_all_of_an_item_decreases_subtotal(self):
+        self.shopping_basket.add_item_to_basket("Baked Beans")
+        self.shopping_basket.add_item_to_basket("Baked Beans")
+        self.shopping_basket.add_item_to_basket("Biscuits")
+        self.shopping_basket.add_item_to_basket("Biscuits")
+        self.shopping_basket.remove_all_of_item("Biscuits")
+        self.assertEqual(1.98, self.shopping_basket.subtotal)
