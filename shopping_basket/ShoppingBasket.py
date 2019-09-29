@@ -15,3 +15,5 @@ class ShoppingBasket:
             else:
                 self.basket[item] = 1
 
+    def remove_one_item_from_basket(self, item):
+        pass
