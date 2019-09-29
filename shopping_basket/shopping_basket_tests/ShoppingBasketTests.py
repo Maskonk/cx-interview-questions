@@ -43,3 +43,7 @@ class TestShoppingBasket(TestCase):
         self.shopping_basket.add_item_to_basket("Baked Beans")
         self.shopping_basket.remove_all_of_item("Baked Beans")
         self.assertEqual({}, self.shopping_basket.basket)
+
+    def test_has_subtotal_of_a_single_item(self):
+        self.shopping_basket.add_item_to_basket("Baked Beans")
+        self.assertEqual(0.99, self.shopping_basket.subtotal)
