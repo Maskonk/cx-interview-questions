@@ -1,12 +1,12 @@
 {
   "get1free": {
     "Baked Beans": {
-      "qualifying amount": 3,
+      "qualifying amount": 3
     }
   },
   "percent off": {
     "Sardines": {
-      "percent": 25,
+      "percent": 25
     }
   }
 }
