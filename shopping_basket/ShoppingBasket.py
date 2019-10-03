@@ -44,5 +44,5 @@ class ShoppingBasket:
                 if self.basket[item] >= self.offers["get1free"][item]["qualifying amount"]:
                     discounted_amount = math.floor(self.basket[item] / self.offers["get1free"][item]["qualifying amount"])
                     discount = discounted_amount * self.catalogue[item] * discounted_amount
-                
+
         return discount
