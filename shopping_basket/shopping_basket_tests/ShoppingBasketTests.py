@@ -66,3 +66,10 @@ class TestShoppingBasket(TestCase):
         self.shopping_basket.add_item_to_basket("Biscuits")
         self.shopping_basket.remove_all_of_item("Biscuits")
         self.assertEqual(1.98, self.shopping_basket.subtotal)
+
+    def test_buy_X_get_one_free_discount(self):
+        self.shopping_basket.add_item_to_basket("Baked Beans")
+        self.shopping_basket.add_item_to_basket("Baked Beans")
+        self.shopping_basket.add_item_to_basket("Baked Beans")
+        self.assertEqual(1.98, self.shopping_basket.total)
+        self.assertEqual(0.99, self.shopping_basket.discount)
