@@ -22,7 +22,7 @@ class ShoppingBasket:
             else:
                 self.basket[item] = 1
             self.subtotal += self.catalogue[item]
-            self.discount += self.check_discount()
+            self.discount = self.check_discount()
             self.total += round(self.subtotal - self.discount, 2)
 
     def remove_one_of_item_from_basket(self, item):
@@ -44,5 +44,9 @@ class ShoppingBasket:
                 if self.basket[item] >= self.offers["get1free"][item]["qualifying amount"]:
                     discounted_amount = math.floor(self.basket[item] / self.offers["get1free"][item]["qualifying amount"])
                     discount = discounted_amount * self.catalogue[item] * discounted_amount
+
+            if item in self.offers["percent off"]:
+                total_price = self.catalogue[item] * self.basket[item]
+                discount = total_price * (self.offers["percent off"][item]["percent"] / 100)
 
         return discount
