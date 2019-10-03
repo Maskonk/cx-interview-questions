@@ -11,6 +11,9 @@ class ShoppingBasket:
         with open('shopping_basket/Catalogue.json', 'r') as f:
             self.catalogue = json.load(f)
 
+        with open('shopping_basket/Catalogue.json', 'r') as f:
+            self.offers = json.load(f)
+
     def add_item_to_basket(self, item):
         if item in self.catalogue.keys():
             if item in self.basket:
