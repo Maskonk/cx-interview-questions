@@ -33,3 +33,5 @@ class ShoppingBasket:
         if item in self.basket:
             self.subtotal -= self.basket[item] * self.catalogue[item]
             self.basket.pop(item)
+
+    def check_discount(self):
